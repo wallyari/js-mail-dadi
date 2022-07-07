@@ -1,3 +1,4 @@
+//Email
 
 let listEmail=[
     "utenteuno@gmail.com",
@@ -26,4 +27,20 @@ let listEmail=[
         }
     });
 
-   
+//Gioco dei Dadi 
+let userDice = document.getElementById('my-dice-btn');
+
+userDice.addEventListener('click', function(){
+    let randomNum = Math.floor((Math.random()*6) +1);
+    console.log(randomNum);
+    document.getElementById('user-dice').innerHTML = randomNum;
+
+    let computerDice = Math.floor((Math.random()*6) +1);
+    document.getElementById('computer-dice').innerHTML = computerDice;
+
+    if (randomNum > computerDice){
+        document.getElementById('winner').innerHTML = "Hai vinto";
+    } else {
+        document.getElementById('winner').innerHTML = "Ha vinto il computer, ciaone.";
+    }
+});  
