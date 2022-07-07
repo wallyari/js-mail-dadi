@@ -10,20 +10,27 @@ let listEmail=[
     let userMail = document.getElementById("email");
     let btnVerify = document.getElementById("my-btn");
     let message = document.getElementById("message");
+
+    let success= false;
     
     btnVerify.addEventListener('click',function(){
         for(let i = 0; i < listEmail.length; i++){
     
             if(userMail.value == listEmail[i]){
-            message.innerHTML = "Ci sei!";
-            i= listEmail.length;
-        }
-    
-            else{
-                message.innerHTML = "Non ci sei, riprova."
+                success= true;
+           
             }
+    
             console.log(message.innerText)
             
+        }
+        if(success==true){
+            message.innerHTML = "Ci sei!";
+
+        }
+        else{
+            message.innerHTML = "Non ci sei, riprova."
+
         }
     });
 
