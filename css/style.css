@@ -5,6 +5,11 @@
 	}
 
 	body{
+		color: white;
 		font-family: 'Roboto', sans-serif;
 		background-color: lightcoral;
 	}
+
+	#email, h2{
+        margin-top: 2rem;
+    }
